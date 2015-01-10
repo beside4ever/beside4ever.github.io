@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: https://beside4ever.github.io//sitemap.xml 
+Sitemap: http://beside4ever.github.io/sitemap.xml 
