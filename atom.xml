@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[班登 - 博客]]></title>
-  <link href="http://beside4ever.github.io/atom.xml" rel="self"/>
-  <link href="http://beside4ever.github.io/"/>
-  <updated>2015-01-10T14:02:38+08:00</updated>
-  <id>http://beside4ever.github.io/</id>
+  <link href="http://blog.bandon.me/atom.xml" rel="self"/>
+  <link href="http://blog.bandon.me/"/>
+  <updated>2015-01-10T15:36:13+08:00</updated>
+  <id>http://blog.bandon.me/</id>
   <author>
-    <name><![CDATA[Beside]]></name>
+    <name><![CDATA[班登]]></name>
     <email><![CDATA[beside4ever@outlook.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[First-step]]></title>
-    <link href="http://beside4ever.github.io/blog/2015/01/10/first-step/"/>
+    <link href="http://blog.bandon.me/blog/2015/01/10/first-step/"/>
     <updated>2015-01-10T03:02:43+08:00</updated>
-    <id>http://beside4ever.github.io/blog/2015/01/10/first-step</id>
+    <id>http://blog.bandon.me/blog/2015/01/10/first-step</id>
     <content type="html"><![CDATA[<h1>第一篇文章</h1>
 
 <p>依然三点，随便写句话吧……</p>
