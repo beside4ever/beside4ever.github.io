@@ -4,7 +4,7 @@
   <title><![CDATA[班登 - 博客]]></title>
   <link href="http://blog.bandon.me/atom.xml" rel="self"/>
   <link href="http://blog.bandon.me/"/>
-  <updated>2015-01-11T00:50:17+08:00</updated>
+  <updated>2015-01-11T12:49:47+08:00</updated>
   <id>http://blog.bandon.me/</id>
   <author>
     <name><![CDATA[班登]]></name>
@@ -26,6 +26,9 @@
 本文将简述在Windows平台（Win7 64bit）上搭建这套系统的全流程和要点。</p>
 
 <p>在继续看本文之前，请先确定你具有<strong>折腾</strong>的精神。</p>
+
+<!--more-->
+
 
 <h2>目录</h2>
 
