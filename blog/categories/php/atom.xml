@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Php | 班登 - 博客]]></title>
+  <link href="http://blog.bandon.me/blog/categories/php/atom.xml" rel="self"/>
+  <link href="http://blog.bandon.me/"/>
+  <updated>2015-07-15T00:03:21+08:00</updated>
+  <id>http://blog.bandon.me/</id>
+  <author>
+    <name><![CDATA[班登]]></name>
+    <email><![CDATA[beside4ever@outlook.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[检测$_REQUEST['GLOBALS']以处理register_globals问题]]></title>
+    <link href="http://blog.bandon.me/blog/2015/07/14/request-globals-issue/"/>
+    <updated>2015-07-14T23:57:55+08:00</updated>
+    <id>http://blog.bandon.me/blog/2015/07/14/request-globals-issue</id>
+    <content type="html"><![CDATA[<h1>检测$_REQUEST[&lsquo;GLOBALS&rsquo;]以处理register_globals问题</h1>
+
+<p>全局php包含文件中最前面的代码：</p>
+
+<pre><code>if (isset($_REQUEST['GLOBALS']) || isset($_FILES['GLOBALS'])) {
+    die('GLOBALS overwrite attempt detected');
+}
+</code></pre>
+
+<p>这段代码的作用是为了在php.ini中，设定register_globals为on的前提下，检测恶意注入变量的行为。</p>
+
+<p>register_globals是php的一个配置指令，开启时将自动把用户提交的值注册成全局变量。比如用户的表单提交了一个<code>name="username"</code>的值，那么在后台就可以直接用<code>$username</code>取到。</p>
+
+<p>这个配置显然是不安全的，比如用户验证：</p>
+
+<pre><code>if(##用户验证条件##){
+    $valid = true;
+}
+</code></pre>
+
+<p>那么我在访问页面的时候可以自己加一个参数如<code>page.php?valid=1</code>，就轻松绕过验证了。</p>
+
+<p>回到开头的代码，同样，如果用户访问的时候设定了<code>GLOBALS</code>的值，那么就可以篡改内置超全局变量<code>$GLOBALS</code>的值。所以这段代码的目的就是检测用户的恶意篡改，如果有则终止脚本运行。</p>
+
+<p>php4.2之后，<code>register_globals</code>配置已经默认为<code>off</code>了，5.4之后就直接废弃了这个特性，所以高版本php对这个问题倒不用太过关心。另外获取用户参数的时候也应该直接取<code>$_POST</code>,<code>$_GET</code>之类，这样就不会产生模糊不清的问题。</p>
+
+<h2>关于$_REQUEST的两点细节</h2>
+
+<ol>
+<li>$<em>REQUEST最早是包含$</em>GET、$<em>POST、$</em>COOKIE、$<em>FILES的，4.3以后移除了$</em>FILES.</li>
+<li><p>$<em>REQUEST中的内容并不会随着用户在脚本中修改$</em>GET/$_POST等元素的值而改变，如下示例：</p>
+
+<p> $<em>GET[&lsquo;foo&rsquo;] = &lsquo;a&rsquo;;
+ $</em>POST[&lsquo;bar&rsquo;] = &lsquo;b&rsquo;;
+ var_dump($<em>GET); // Element &lsquo;foo&rsquo; is string(1) &ldquo;a&rdquo;
+ var_dump($</em>POST); // Element &lsquo;bar&rsquo; is string(1) &ldquo;b&rdquo;
+ var_dump($_REQUEST); // Does not contain elements &lsquo;foo&rsquo; or &lsquo;bar&rsquo;</p></li>
+</ol>
+
+
+<h2>参考</h2>
+
+<ul>
+<li><a href="http://php.net/manual/zh/faq.misc.php">http://php.net/manual/zh/faq.misc.php</a></li>
+<li><a href="http://php.net/manual/zh/security.globals.php">http://php.net/manual/zh/security.globals.php</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
