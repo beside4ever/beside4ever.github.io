@@ -4,7 +4,7 @@
   <title><![CDATA[班登 - 博客]]></title>
   <link href="http://blog.bandon.me/atom.xml" rel="self"/>
   <link href="http://blog.bandon.me/"/>
-  <updated>2015-07-15T00:03:21+08:00</updated>
+  <updated>2015-07-15T00:08:32+08:00</updated>
   <id>http://blog.bandon.me/</id>
   <author>
     <name><![CDATA[班登]]></name>
@@ -18,9 +18,7 @@
     <link href="http://blog.bandon.me/blog/2015/07/14/angularjs-learning-note/"/>
     <updated>2015-07-14T23:58:15+08:00</updated>
     <id>http://blog.bandon.me/blog/2015/07/14/angularjs-learning-note</id>
-    <content type="html"><![CDATA[<h1>Angular JS 学习小记</h1>
-
-<h2>概述</h2>
+    <content type="html"><![CDATA[<h2>概述</h2>
 
 <p>Codecademy新开了Angular的课程，赶紧去入门了一下，以前一直没接触，现在工作正好需要用。把教程里的东西简要归纳一下，供以后回顾使用。</p>
 
@@ -39,6 +37,9 @@
 <li>index.html 模板文件，用ng-*属性定义和angular有关的绑定</li>
 <li>MainController.js 控制器文件，定义Angular中的控制器</li>
 </ul>
+
+
+<!--more-->
 
 
 <h3>双向数据绑定</h3>
@@ -262,9 +263,7 @@ app.config(function ($routeProvider) {
     <link href="http://blog.bandon.me/blog/2015/07/14/request-globals-issue/"/>
     <updated>2015-07-14T23:57:55+08:00</updated>
     <id>http://blog.bandon.me/blog/2015/07/14/request-globals-issue</id>
-    <content type="html"><![CDATA[<h1>检测$_REQUEST[&lsquo;GLOBALS&rsquo;]以处理register_globals问题</h1>
-
-<p>全局php包含文件中最前面的代码：</p>
+    <content type="html"><![CDATA[<p>全局php包含文件中最前面的代码：</p>
 
 <pre><code>if (isset($_REQUEST['GLOBALS']) || isset($_FILES['GLOBALS'])) {
     die('GLOBALS overwrite attempt detected');
@@ -283,6 +282,9 @@ app.config(function ($routeProvider) {
 </code></pre>
 
 <p>那么我在访问页面的时候可以自己加一个参数如<code>page.php?valid=1</code>，就轻松绕过验证了。</p>
+
+<!--more-->
+
 
 <p>回到开头的代码，同样，如果用户访问的时候设定了<code>GLOBALS</code>的值，那么就可以篡改内置超全局变量<code>$GLOBALS</code>的值。所以这段代码的目的就是检测用户的恶意篡改，如果有则终止脚本运行。</p>
 

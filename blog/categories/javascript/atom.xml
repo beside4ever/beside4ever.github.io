@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Javascript | 班登 - 博客]]></title>
   <link href="http://blog.bandon.me/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://blog.bandon.me/"/>
-  <updated>2015-07-15T00:03:21+08:00</updated>
+  <updated>2015-07-15T00:08:32+08:00</updated>
   <id>http://blog.bandon.me/</id>
   <author>
     <name><![CDATA[班登]]></name>
@@ -18,9 +18,7 @@
     <link href="http://blog.bandon.me/blog/2015/07/14/angularjs-learning-note/"/>
     <updated>2015-07-14T23:58:15+08:00</updated>
     <id>http://blog.bandon.me/blog/2015/07/14/angularjs-learning-note</id>
-    <content type="html"><![CDATA[<h1>Angular JS 学习小记</h1>
-
-<h2>概述</h2>
+    <content type="html"><![CDATA[<h2>概述</h2>
 
 <p>Codecademy新开了Angular的课程，赶紧去入门了一下，以前一直没接触，现在工作正好需要用。把教程里的东西简要归纳一下，供以后回顾使用。</p>
 
@@ -39,6 +37,9 @@
 <li>index.html 模板文件，用ng-*属性定义和angular有关的绑定</li>
 <li>MainController.js 控制器文件，定义Angular中的控制器</li>
 </ul>
+
+
+<!--more-->
 
 
 <h3>双向数据绑定</h3>

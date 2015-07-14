@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Php | 班登 - 博客]]></title>
   <link href="http://blog.bandon.me/blog/categories/php/atom.xml" rel="self"/>
   <link href="http://blog.bandon.me/"/>
-  <updated>2015-07-15T00:03:21+08:00</updated>
+  <updated>2015-07-15T00:08:32+08:00</updated>
   <id>http://blog.bandon.me/</id>
   <author>
     <name><![CDATA[班登]]></name>
@@ -18,9 +18,7 @@
     <link href="http://blog.bandon.me/blog/2015/07/14/request-globals-issue/"/>
     <updated>2015-07-14T23:57:55+08:00</updated>
     <id>http://blog.bandon.me/blog/2015/07/14/request-globals-issue</id>
-    <content type="html"><![CDATA[<h1>检测$_REQUEST[&lsquo;GLOBALS&rsquo;]以处理register_globals问题</h1>
-
-<p>全局php包含文件中最前面的代码：</p>
+    <content type="html"><![CDATA[<p>全局php包含文件中最前面的代码：</p>
 
 <pre><code>if (isset($_REQUEST['GLOBALS']) || isset($_FILES['GLOBALS'])) {
     die('GLOBALS overwrite attempt detected');
@@ -39,6 +37,9 @@
 </code></pre>
 
 <p>那么我在访问页面的时候可以自己加一个参数如<code>page.php?valid=1</code>，就轻松绕过验证了。</p>
+
+<!--more-->
+
 
 <p>回到开头的代码，同样，如果用户访问的时候设定了<code>GLOBALS</code>的值，那么就可以篡改内置超全局变量<code>$GLOBALS</code>的值。所以这段代码的目的就是检测用户的恶意篡改，如果有则终止脚本运行。</p>
 

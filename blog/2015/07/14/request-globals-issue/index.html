@@ -9,7 +9,8 @@
   <meta name="author" content="班登">
 
   
-  <meta name="description" content="检测$_REQUEST[&lsquo;GLOBALS&rsquo;]以处理register_globals问题 全局php包含文件中最前面的代码： if (isset($_REQUEST['GLOBALS']) || isset($_FILES['GLOBALS'])) { die(' &hellip;">
+  <meta name="description" content="全局php包含文件中最前面的代码： if (isset($_REQUEST['GLOBALS']) || isset($_FILES['GLOBALS'])) { die('GLOBALS overwrite attempt detected');
+} 这段代码的作用是为了在php.ini中， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -89,9 +90,7 @@
   </header>
 
 
-<div class="entry-content"><h1>检测$_REQUEST[&lsquo;GLOBALS&rsquo;]以处理register_globals问题</h1>
-
-<p>全局php包含文件中最前面的代码：</p>
+<div class="entry-content"><p>全局php包含文件中最前面的代码：</p>
 
 <pre><code>if (isset($_REQUEST['GLOBALS']) || isset($_FILES['GLOBALS'])) {
     die('GLOBALS overwrite attempt detected');
@@ -110,6 +109,9 @@
 </code></pre>
 
 <p>那么我在访问页面的时候可以自己加一个参数如<code>page.php?valid=1</code>，就轻松绕过验证了。</p>
+
+<!--more-->
+
 
 <p>回到开头的代码，同样，如果用户访问的时候设定了<code>GLOBALS</code>的值，那么就可以篡改内置超全局变量<code>$GLOBALS</code>的值。所以这段代码的目的就是检测用户的恶意篡改，如果有则终止脚本运行。</p>
 
