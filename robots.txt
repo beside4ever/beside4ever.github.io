@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://blog.bandon.me/sitemap.xml 
+Sitemap: http://beside4ever.github.io/sitemap.xml 
