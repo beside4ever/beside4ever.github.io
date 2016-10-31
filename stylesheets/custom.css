@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+body{
+	font-family: 'Work Sans', Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+}
+.heading, body>header h1, h1, h2, h3, h4, h5, h6,
+body>header h2{
+	font-family: 'Roboto Slab', Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+}
+
+
+>>>>>>> 8e18ed3d40eab79a9306cfe9861e1025a64c0a17
 .aside_about_item{
 	margin-top: 10px;
 	border-radius: 5px;
@@ -32,4 +44,8 @@
 
 .aside_about_item.about_mu{
 	background: url(/images/mu.png) 0px 0px no-repeat;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 8e18ed3d40eab79a9306cfe9861e1025a64c0a17

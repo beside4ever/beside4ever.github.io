@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+<<<<<<< HEAD
     <loc>http://blog.bandon.me/blog/2016/10/31/late-fall/</loc>
     <lastmod>2016-10-31T16:55:35+08:00</lastmod>
     <priority>0.8</priority>
@@ -8,6 +9,10 @@
   <url>
     <loc>http://blog.bandon.me/blog/2016/08/23/react-js-conclusion/</loc>
     <lastmod>2016-08-23T15:20:34+08:00</lastmod>
+=======
+    <loc>http://blog.bandon.me/blog/2016/08/23/using-react-native/</loc>
+    <lastmod>2016-08-23T17:19:02+08:00</lastmod>
+>>>>>>> 8e18ed3d40eab79a9306cfe9861e1025a64c0a17
     <priority>0.8</priority>
   </url>
   <url>
@@ -27,19 +32,31 @@
   </url>
   <url>
     <loc>http://blog.bandon.me/blog/archives/</loc>
+<<<<<<< HEAD
     <lastmod>2016-10-31T23:02:41+08:00</lastmod>
+=======
+    <lastmod>2016-08-23T18:56:42+08:00</lastmod>
+>>>>>>> 8e18ed3d40eab79a9306cfe9861e1025a64c0a17
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://blog.bandon.me/</loc>
+<<<<<<< HEAD
     <lastmod>2016-10-31T23:02:41+08:00</lastmod>
+=======
+    <lastmod>2016-08-23T18:56:42+08:00</lastmod>
+>>>>>>> 8e18ed3d40eab79a9306cfe9861e1025a64c0a17
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://blog.bandon.me/about/</loc>
+<<<<<<< HEAD
     <lastmod>2016-10-31T23:02:41+08:00</lastmod>
+=======
+    <lastmod>2016-08-23T18:56:42+08:00</lastmod>
+>>>>>>> 8e18ed3d40eab79a9306cfe9861e1025a64c0a17
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
