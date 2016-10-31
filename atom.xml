@@ -4,11 +4,7 @@
   <title><![CDATA[班登 - 博客]]></title>
   <link href="http://blog.bandon.me/atom.xml" rel="self"/>
   <link href="http://blog.bandon.me/"/>
-<<<<<<< HEAD
   <updated>2016-10-31T23:02:41+08:00</updated>
-=======
-  <updated>2016-08-23T18:56:42+08:00</updated>
->>>>>>> 8e18ed3d40eab79a9306cfe9861e1025a64c0a17
   <id>http://blog.bandon.me/</id>
   <author>
     <name><![CDATA[班登]]></name>
@@ -18,7 +14,6 @@
 
   
   <entry>
-<<<<<<< HEAD
     <title type="html"><![CDATA[写在深秋]]></title>
     <link href="http://blog.bandon.me/blog/2016/10/31/late-fall/"/>
     <updated>2016-10-31T16:55:35+08:00</updated>
@@ -52,15 +47,6 @@
     <content type="html"><![CDATA[<h2>项目介绍</h2>
 
 <p>我所在的Mini项目第6组要做的项目名称为<strong>我要</strong>。这是一个同时在安卓、iOS、Web三端发布的匿名问答类应用，我们用了大约一个月时间完成设计、开发与测试。</p>
-=======
-    <title type="html"><![CDATA[使用React Native快速开发应用]]></title>
-    <link href="http://blog.bandon.me/blog/2016/08/23/using-react-native/"/>
-    <updated>2016-08-23T17:19:02+08:00</updated>
-    <id>http://blog.bandon.me/blog/2016/08/23/using-react-native</id>
-    <content type="html"><![CDATA[<h2>项目介绍</h2>
-
-<p>7月开发了一个小项目，这是一个同时在安卓、iOS、Web三端发布的匿名问答类应用，我们用了大约一个月时间完成设计、开发与测试。</p>
->>>>>>> 8e18ed3d40eab79a9306cfe9861e1025a64c0a17
 
 <p>在本项目中，我主要负责的工作是和另一名前端同事一起完成iOS端的开发。为了最大化利用我们本身的技术优势，并在项目过程中学习新的架构和理念，我们选用了React Native框架来进行程序的编写。</p>
 
@@ -69,21 +55,10 @@
 
 <h2>框架选择</h2>
 
-<<<<<<< HEAD
 <p>目前主流的移动端开发模式主要有以下几种：
 1. 纯Web页面，浏览器运行，可快速传播，减少用户负担，体验和流畅度较差
 2. 纯原生开发，体验较好，学习时间和开发效率相对较长和较慢
 3. Hybird App，混合开发，以WebView为Web嵌入的核心，使用jsBirdge让js和native进行交互。</p>
-=======
-<p>目前主流的移动端开发模式主要有以下几种：</p>
-
-<ol>
-<li>纯Web页面，浏览器运行，可快速传播，减少用户负担，体验和流畅度较差</li>
-<li>纯原生开发，体验较好，学习时间和开发效率相对较长和较慢</li>
-<li>Hybird App，混合开发，以WebView为Web嵌入的核心，使用jsBirdge让js和native进行交互。</li>
-</ol>
-
->>>>>>> 8e18ed3d40eab79a9306cfe9861e1025a64c0a17
 
 <p>在当前项目的需求下，为了短期内完成一个高体验的应用，使用React Native进行开发几乎是我最好的选择。而且，由于我们的项目需要进行音视频的播放和录制，这种功能也需要原生代码的支持。</p>
 
@@ -91,7 +66,6 @@
 
 <h2>项目架构</h2>
 
-<<<<<<< HEAD
 <p>在开发之前，我针对项目的需求，对整个项目的架构进行了基本的设计。整个项目架构如下：
 - 页面逻辑：首页以一个TabView为顶层，每个Tab内以Navigator为顶层，每个Route为一个页面。
 - 接口管理：后台为Restful API服务器，因此我专门写了一个接口逻辑的页面，利用<code>fetch</code>函数完成各种http请求，并根据接口类型将<code>get</code>,<code>post</code>,<code>delete</code>方法进行了封装，并对接口地址、返回提示、错误处理进行了统一管理。
@@ -113,41 +87,6 @@
 - 静态内容（提问的问题的内容、发布时间等）
 - 动态内容（浏览数量、点赞等）
 - 音视频播放，需求为在列表项中可直接播放音视频，且该模块的展现根据数据的状态有所不同</p>
-=======
-<p>在开发之前，我针对项目的需求，对整个项目的架构进行了基本的设计。整个项目架构如下：</p>
-
-<ul>
-<li>页面逻辑：首页以一个TabView为顶层，每个Tab内以Navigator为顶层，每个Route为一个页面。</li>
-<li>接口管理：后台为Restful API服务器，因此我专门写了一个接口逻辑的页面，利用<code>fetch</code>函数完成各种http请求，并根据接口类型将<code>get</code>,<code>post</code>,<code>delete</code>方法进行了封装，并对接口地址、返回提示、错误处理进行了统一管理。</li>
-<li>样式管理：RN的样式是一个类css的js对象，由于RN的组件化特性，我选择抽出一部分共用样式和共用样式定义，统一到一个样式文件进行管理。</li>
-<li>文案管理：页面中涉及到的所有文案（按钮、提示、固定标题等），我均在同一文件中进行管理，方便开发和维护，并为项目国际化提供了基础。</li>
-<li>通用模块：项目中的文件下载、文件上传、音视频播放、音视频录制，都编写为了独立的组件，在程序中可随时调用。</li>
-</ul>
-
-
-<h2>所用技术</h2>
-
-<p>项目中涉及到的技术大致如下：</p>
-
-<ul>
-<li>基本框架：React Native</li>
-<li>包管理：npm、cocoapods（只在其中一个原生插件中有使用）</li>
-<li>语言：支持ES6的javascript，广泛使用了ES6新特性（箭头函数、类机制、模块化等）</li>
-<li>调试：watchman、chrome debug、iOS simulator</li>
-</ul>
-
-
-<h2>组件化</h2>
-
-<p>React的核心思想是讲页面中的内容组件化，一切业务由一个组件的树状结构组成。在项目中我利用这个思想写出了可高度复用的代码，举个例子，我们的首页是一个数据列表页，每个列表项中包含了以下几个内容：</p>
-
-<ul>
-<li>静态内容（提问的问题的内容、发布时间等）</li>
-<li>动态内容（浏览数量、点赞等）</li>
-<li>音视频播放，需求为在列表项中可直接播放音视频，且该模块的展现根据数据的状态有所不同</li>
-</ul>
-
->>>>>>> 8e18ed3d40eab79a9306cfe9861e1025a64c0a17
 
 <p>在实际开发中，我将这个页面划分为了三层组件结构。首先，最外层是以<code>ListView</code>为核心的列表页，主要类函数有下拉刷新、底部加载更多、空数据展示等等。第二层是自定义的<code>ListViewItem</code>组件，主要利用<code>props</code>传入数据对象，然后用<code>state</code>存储组件的几个主要状态（支付情况、点赞情况等）。第三层是自定义的音视频模块<code>ModuleAnswer</code>，主要根据支付状态决定展现内容，同时自身维护一个下载状态和播放状态，来支持资源的下载与播放。</p>
 
@@ -185,11 +124,7 @@
 
 <h2>打包发布</h2>
 
-<<<<<<< HEAD
 <p>由于我们开发的最终产品是iOS客户端，因此打包发布流程相对于传统Web项目来说还要简单一些。只需经过正常编译生成应用文件<code>.ipa</code>，就可以分发给别人测试和运行了。React Native内置了一个webpack进行js资源的打包。在本项目中我们使用了网易内部的测试平台<strong>网易测试服务</strong>，使用该平台进行了应用的企业证书签名和发布。
-=======
-<p>由于我们开发的最终产品是iOS客户端，因此打包发布流程相对于传统Web项目来说还要简单一些。只需经过正常编译生成应用文件<code>.ipa</code>，就可以分发给别人测试和运行了。React Native内置了一个webpack进行js资源的打包。
->>>>>>> 8e18ed3d40eab79a9306cfe9861e1025a64c0a17
 由于项目中的代码最终都编译成了应用模块，因此静态资源只有图片一项了。由于项目中只用到了一些图标，图片元素应用不多，因此最终App大小只有2.1M，还是可以接受的体积（同时安卓客户端达到了20M，精简后也还有10M大小）。</p>
 ]]></content>
   </entry>
@@ -253,7 +188,7 @@
 &lt;/div&gt;
 </code></pre>
 
-<p>这里的scope即是angular中的"作用域"概念。在html中，标示<code>ng-controller="MainController"</code>的div内部就是<code>MainController</code>这个控制器的作用域，可以使用该作用域内的变量<code>title</code>,<code>promo</code>,<code>product</code>。</p>
+<p>这里的scope即是angular中的&#8221;作用域&#8221;概念。在html中，标示<code>ng-controller="MainController"</code>的div内部就是<code>MainController</code>这个控制器的作用域，可以使用该作用域内的变量<code>title</code>,<code>promo</code>,<code>product</code>。</p>
 
 <p>所谓双向数据绑定，也就是说，控制器内的变量变化会直接反映到html上，同样html上的数据变化也会返回到控制器中。</p>
 
