@@ -1,3 +1,9 @@
+body{
+	font-family: 'Work Sans', Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+}
+.heading, body>header h1, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+}
 .aside_about_item{
 	margin-top: 10px;
 	border-radius: 5px;
